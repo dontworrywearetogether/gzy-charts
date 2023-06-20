@@ -8,19 +8,21 @@
     <script>
         window.onload = function(){
             // jquery get data
-            $.ajax({
-                type:"GET",
-                url:"https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json",
-                headers:{
-                    // "Content-Type":"application/json",
-                    "Access-Control-Allow-Origin":"*"
-                },
-                data:{},
-                dataType:"json",
-                success:function(data){
-                    console.log(data)
-                }
-
+            // $.ajax({
+            //     type:"GET",
+            //     url:"https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json",
+            //     headers:{
+            //         // "Content-Type":"application/json",
+            //         "Access-Control-Allow-Origin":"*"
+            //     },
+            //     data:{},
+            //     dataType:"json",
+            //     success:function(data){
+            //         console.log(data)
+            //     }
+            //     })
+            $.get("https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json", function(_rawData){
+                console.log(_rowData)
             })
         }
     </script>
