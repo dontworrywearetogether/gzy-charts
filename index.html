@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        window.onload = function(){
+            // jquery get data
+            $.ajax({
+                type:"GET",
+                url:"https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json",
+                headers:{
+                    // "Content-Type":"application/json",
+                    "Access-Control-Allow-Origin":"*"
+                },
+                data:{},
+                dataType:"json",
+                success:function(data){
+                    console.log(data)
+                }
+
+            })
+        }
+    </script>
 </head>
 <body>
     <h1>for gzy-charts </h1>
